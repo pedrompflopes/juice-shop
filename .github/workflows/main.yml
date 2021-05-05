@@ -1,0 +1,19 @@
+name: Checkmarx AST Scan
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkmarx AST CLI Action
+        uses:  checkmarxDev/ast-github-action@v0.26-alpha
+        with:
+          base_uri: http://demo.ast-cloud.com
+          client_id: ${{ secrets.CLIENT_ID }}
+          secret: ${{ secrets.SECRET }}
