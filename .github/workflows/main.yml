@@ -14,7 +14,7 @@ jobs:
       - name: Checkmarx AST CLI Action
         uses: checkmarxDev/ast-github-action@master #Github Action version
         with:
-          project_name: ast-github-tester
+          project_name: pedro-juice-shop
           base_uri: https://ast-master.dev.cxast.net/
           cx_tenant: galactica
           cx_client_id: ${{ secrets.CX_CLIENT_ID }}
