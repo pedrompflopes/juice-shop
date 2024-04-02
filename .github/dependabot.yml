@@ -1,0 +1,10 @@
+version: 2
+update_configs:
+  - package_manager: "javascript"
+    directory: "/"
+    update_schedule: "weekly"
+    target_branch: "master"
+    commit_message:
+      prefix: "CNS-11"
+    default_labels:
+      - "dependencies"
