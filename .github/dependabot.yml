@@ -1,10 +1,11 @@
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 version: 2
-update_configs:
-  - package_manager: "javascript"
+
+updates:
+  # Maintain dependencies for Docker
+  - package-ecosystem: "docker"
     directory: "/"
-    update_schedule: "weekly"
-    target_branch: "master"
     commit_message:
       prefix: "CNS-11"
-    default_labels:
-      - "dependencies"
+    schedule:
+      interval: "weekly"
